@@ -1,0 +1,3 @@
+SELECT * FROM `users_backup` where id not in (select id from users)
+update users set satker='SPKT' WHERE id in (SELECT id FROM `users_backup`)
+INSERT INTO users SELECT * FROM `users_backup` where id not in (select id from users) 
